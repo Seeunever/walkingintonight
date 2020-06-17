@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+{% load static %}
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
+    <script type="text/javascript" src="/static/js/character.js/"></script>
+    <meta charset="UTF-8">
+</head>
+<title>walking into night</title>
+<body>
+    <div class="character">
+        <div class="name"></div>
+        <div class="job"></div>
+        <div class="hp"></div>
+        <div class="mp"></div>
+        <div class="belongings"></div>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <select class="create_pl_choose" id="job">
+            <option value = "医生">医生</option>
+            <option value = "戏剧演员">戏剧演员</option>
+            <option value = "出版商">出版商</option>
+        </select>
+        <script>
+            var storage = window.localStorage;
+            storage.job=job.value;
+        </script>
+
+    </form>
+
+
+    <form action="/back_to_index/" method="POST">
+        {% csrf_token %}
+        <button class="back_to_index">回到最初</button>
+    </form>
+
+    <h1 class="name">{{context}}</h1>
+    </body>
+    </html>

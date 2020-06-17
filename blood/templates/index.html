@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+{% load static %}
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
+    <meta charset="UTF-8">
+</head>
+<title>walking into night</title>
+<body>
+    <div class="character">
+        <div class="name"></div>
+        <div class="job"></div>
+        <div class="hp"></div>
+        <div class="mp"></div>
+        <div class="belongings"></div>
+    </div>
+
+    <div class="walkingintonight" font-color="white">walking into night</div>
+
+    <div class="maintext">在我的记忆里，戴斯先生是一位非常著名的推理小说作家。他的名号响彻云霄，世界各地的书店以及文学集会上都能找到他的踪影。在戴斯先生成名后的这些年里，每当他完成一部作品，都会在正式发布之前邀请一些人到他居住的小镇莱斯科尔，参加今次的推理宴会————这些人中，有他相识多年的旧友，有和他交往密切的工作伙伴，有通信多年却未曾谋面的痴心读者，亦有游历四方不经意间相知相遇的路人。
+        在推理宴会举办的过程里，他会把这本全新、精妙绝伦而从不为外人所窥视的推理小说中缜密的杀人或密室手法以谜题的方式呈现出来，并让他的来客们尝试推理解答、还原真相。第一位成功找到真相的人将会获得成为戴斯先生下一部作品中主角的资格。我隐约记得上一次推理宴会的举办是2年前，而至今为止的每次宴会，戴斯先生都会邀请不多不少的15名客人。  
+        <br><br>这是一个寒鸦落在电线上，枯黄的落叶被风卷起又吹散，湖面不再泛起波纹，天气还不到结冰的时候，河鱼却因为寒冷已经纷纷沉入水底的初冬。我像往常一样在打开家门之前检查自己的信箱，意外的发现了一封来自莱斯科尔的邀请函。</div>
+    <form action="/create_pl/" method="POST">
+        {% csrf_token %}
+        <button class="create_pl">创建角色</button>
+    </form>
+
+    </body>
+    </html>
