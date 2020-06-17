@@ -16,16 +16,23 @@
         <div class="belongings"></div>
     </div>
 
-    <form method="POST">
+    <form action="#" method="POST" id="choose_job">
         {% csrf_token %}
         <select class="create_pl_choose" id="job">
             <option value = "医生">医生</option>
             <option value = "戏剧演员">戏剧演员</option>
             <option value = "出版商">出版商</option>
         </select>
+        <button type="button" id="go">go</button>
         <script>
+            var choosejob = document.getElementById("choosejob");
             var storage = window.localStorage;
-            storage.job=job.value;
+            var go = document.getElementById('go');
+            go.addEventListener('click',function(){
+                storage.job=job.value;
+                form_submit.submit();
+              })
+
         </script>
 
     </form>
