@@ -16,26 +16,46 @@
         <div class="belongings"></div>
     </div>
 
-    <form action="#" method="POST" id="choose_job">
-        {% csrf_token %}
-        <select class="create_pl_choose" id="job">
-            <option value = "医生">医生</option>
-            <option value = "戏剧演员">戏剧演员</option>
-            <option value = "出版商">出版商</option>
-        </select>
-        <button type="button" id="go">go</button>
-        <script>
-            var choosejob = document.getElementById("choosejob");
-            var storage = window.localStorage;
-            var go = document.getElementById('go');
-            go.addEventListener('click',function(){
-                storage.job=job.value;
-                form_submit.submit();
-              })
 
+
+    <p1 class="dialog">我是一个...</p1>
+
+        <button class="choose" id="job_doctor" value="医生" onclick="jobdoctor();">医生</button>
+        <script>
+            var storage = window.localStorage;
+            var times = 0;
+            function jobdoctor(){
+                job_doctor.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
+                storage.job = times % 2 == 0 ? 'none' : job_doctor.value;
+                times++;
+            }
         </script>
 
-    </form>
+        <button class="choose" id="job_book" value="出版商" onclick="jobbook();">出版商</button>
+        <script>
+            var storage = window.localStorage;
+            function jobbook(){
+                job_book.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
+                storage.job = times % 2 == 0 ? 'none' : job_book.value;
+                times++;
+            }
+            
+        </script>
+
+        <button class="choose" id="job_pub" value="酒吧兼职招待" onclick="jobpub();">酒吧兼职招待</button>
+        <script>
+            var storage = window.localStorage;
+            function jobpub(){
+                job_pub.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
+                storage.job = times % 2 == 0 ? 'none' : job_pub.value;
+                times++;
+            }
+        </script>
+
+        <form action="/choose_age_sex/" method="POST">
+            {% csrf_token %}
+            <button class="and">然后...</button>
+        </form>
 
 
     <form action="/back_to_index/" method="POST">
@@ -43,6 +63,5 @@
         <button class="back_to_index">回到最初</button>
     </form>
 
-    <h1 class="name">{{context}}</h1>
     </body>
     </html>

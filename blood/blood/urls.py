@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from django.conf.urls import url
 from create_pl import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('back_to_index/',views.back_to_index),
     path('create_pl/',views.create_pl),
+    path('choose_age_sex/',views.choose_age_sex),
     
 ]
 

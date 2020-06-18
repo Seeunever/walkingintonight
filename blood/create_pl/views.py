@@ -9,3 +9,6 @@ def create_pl(request):
 
 def back_to_index(request):
     return render(request,'index.html')
+
+def choose_age_sex(request):
+    return render(request,'choose_age_sex.html')

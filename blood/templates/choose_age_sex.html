@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+{% load static %}
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
+    <script type="text/javascript" src="/static/js/character.js/"></script>
+    <meta charset="UTF-8">
+</head>
+<title>walking into night</title>
+<body>
+    <div class="character">
+        <div class="name">context</div>
+        <div class="job"></div>
+        <div class="hp"></div>
+        <div class="mp"></div>
+        <div class="belongings"></div>
+    </div>
+
+
+
+    <p1 class="dialog">我是一个...</p1>
+
+        <button class="choose" id="sex_male" value="男" onclick="sexmale();">男的</button>
+        <script>
+            var storage = window.localStorage;
+            var times = 0;
+            function sexmale(){
+                sex_male.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
+                storage.sex = times % 2 == 0 ? 'none' : sex_male.value;
+                times++;
+            }
+        </script>
+
+        <button class="choose" id="sex_female" value="女" onclick="sexfemale();">可爱的女孩子</button>
+        <script>
+            var storage = window.localStorage;
+            function sexfemale(){
+                sex_female.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
+                storage.sex = times % 2 == 0 ? 'none' : sex_female.value;
+                times++;
+            }
+            
+        </script>
+
+        <form action="/choose_name/" method="POST">
+            {% csrf_token %}
+            <button class="and">然后...</button>
+        </form>
+
+
+    <form action="/back_to_index/" method="POST">
+        {% csrf_token %}
+        <button class="back_to_index">回到最初</button>
+    </form>
+
+    </body>
+    </html>
