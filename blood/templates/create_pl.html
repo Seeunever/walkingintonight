@@ -5,20 +5,41 @@
     <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
     <script type="text/javascript" src="/static/js/character.js/"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
 </head>
 <title>walking into night</title>
 <body>
+
     <div class="character">
-        <div class="name"></div>
-        <div class="job"></div>
-        <div class="hp"></div>
-        <div class="mp"></div>
-        <div class="belongings"></div>
+        <div class="property">姓名：</div>
+            <p id="pl_name" class="property"></p>
+        <div class="property">职业：</div>
+            <p id="pl_job" class="property"></p>
+        <div class="property">性别：</div>
+            <p id="pl_sex" class="property"></p>
+        <div class="property">HP:</div>
+            <p id="pl_hp" class="property"></p>
+        <div class="property">随身物品：</div>
+            <p id="pl_belongings" class="property"></p>
+        
+        <script>
+            var pl_name = document.getElementById("pl_name");
+            var pl_job = document.getElementById("pl_job");
+            var pl_sex = document.getElementById("pl_sex");
+            var pl_hp = document.getElementById("pl_hp");
+            pl_job.innerText = localStorage.getItem("job");
+            pl_sex.innerText = localStorage.getItem("sex");
+            pl_name.innerText = localStorage.getItem("name")
+            pl_hp.innerText = localStorage.getItem("hp")
+        </script>
     </div>
 
 
 
-    <p1 class="dialog">我是一个...</p1>
+    <p class="dialog">我是一个...</p>
 
         <button class="choose" id="job_doctor" value="医生" onclick="jobdoctor();">医生</button>
         <script>
@@ -29,6 +50,7 @@
                 storage.job = times % 2 == 0 ? 'none' : job_doctor.value;
                 times++;
             }
+            storage.hp = 11;
         </script>
 
         <button class="choose" id="job_book" value="出版商" onclick="jobbook();">出版商</button>

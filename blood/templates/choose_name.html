@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+{% load static %}
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
+    <script type="text/javascript" src="/static/js/character.js/"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<title>walking into night</title>
+<body>
+
+    <div class="character">
+        <div class="property">姓名：</div>
+            <p id="pl_name" class="property"></p>
+        <div class="property">职业：</div>
+            <p id="pl_job" class="property"></p>
+        <div class="property">性别：</div>
+            <p id="pl_sex" class="property"></p>
+        <div class="property">HP:</div>
+            <p id="pl_hp" class="property"></p>
+        <div class="property">随身物品：</div>
+            <p id="pl_belongings" class="property"></p>
+        
+        <script>
+            var pl_name = document.getElementById("pl_name");
+            var pl_job = document.getElementById("pl_job");
+            var pl_sex = document.getElementById("pl_sex");
+            var pl_hp = document.getElementById("pl_hp");
+            pl_job.innerText = localStorage.getItem("job");
+            pl_sex.innerText = localStorage.getItem("sex");
+            pl_name.innerText = localStorage.getItem("name")
+            pl_hp.innerText = localStorage.getItem("hp")
+        </script>
+    </div>
+
+
+
+    <p class="dialog">我的名字叫做...</p>
+    <input class="input_name" id="choose_name">
+    <button class="ensure_name" onclick="choose_name();">确认</button>
+    <script>
+        var storage = window.localStorage;
+        function choose_name(){
+            storage.name = document.getElementById("choose_name").value;
+        }
+    </script>
+
+
+        <form action="/choose_belongings/" method="POST">
+            {% csrf_token %}
+            <button class="and">然后...</button>
+        </form>
+
+
+    <form action="/back_to_index/" method="POST">
+        {% csrf_token %}
+        <button class="back_to_index">回到最初</button>
+    </form>
+
+    </body>
+    </html>

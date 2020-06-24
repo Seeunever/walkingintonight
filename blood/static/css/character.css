@@ -1,31 +1,49 @@
 body{background-color: black;}
 
 div.character{
-    width: 300px;
-    height: 600px;
+    width: 30%;
+    height: 80%;
     background-color:whitesmoke;
     opacity: 0.11;
     float: left;
     border:15px solid rgb(46, 3, 3);
-    margin-top: 110px;
+    margin-top: 10%;
+    color: brown;
+}
+
+div.property{
+    font-size: 20px;
+    color: rgb(143, 20, 20);
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+p.property{
+    font-size: 20px;
+    color: rgb(143, 20, 20);
+    margin-left: 100px;
+    margin-top: 0px;
+
 }
 
 div.maintext{
-    width: 850px;
-    height: 300px;
+    width: 60%;
+    height: 50%;
     /* background-color: whitesmoke; */
     opacity: 1;
-    margin-top: 110px;
-    margin-left: 400px;
+    margin-top: 10%;
+    margin-left: 35%;
     color: whitesmoke;
 }
 
 button.create_pl{
-    width: 100px;
-    height: 50px;
+    width: 30%;
+    height: 10%;
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
-    margin-left:455px ;
+    margin-left:15%;
+    font-size: 15px;
 }
 
 button.back_to_index{
@@ -38,15 +56,28 @@ button.back_to_index{
     top: 100px;
 }
 
-p1.dialog{
-    width: 200px;
-    height: 200px;
+p.dialog{
+    width: 20%;
+    height: 20%;
     background-color: black;
     color: whitesmoke;
     font-size: 20px;
     position: absolute;
-    top: 300px;
-    left: 700px;
+    top: 30%;
+    left: 55%;
+}
+
+input.input_name{
+    position: absolute;
+    top: 40%;
+    left: 750px;
+    width: 100px;
+}
+
+button.ensure_name{
+    position: absolute;
+    top: 40%;
+    left: 900px;
 }
 
 button.choose{
@@ -55,8 +86,8 @@ button.choose{
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
     opacity: 0.3;
-    margin-left: 50px;
-    margin-top: 450px;
+    margin-left: 2%;
+    margin-top: 20%;
     border-width: 0px;
     font-size: 20px;
 }
@@ -64,8 +95,9 @@ button.choose{
 button.and{
     width: 100px;
     height: 50px;
-    margin-top: 50px;
-    margin-left: 360px;
+    position: absolute;
+    top: 70%;
+    right: 38%;
     background-color: black;
     border-color: antiquewhite;
     border-width: 5px;

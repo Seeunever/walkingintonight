@@ -20,9 +20,12 @@ from create_pl import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name='home'),
     path('back_to_index/',views.back_to_index),
     path('create_pl/',views.create_pl),
     path('choose_age_sex/',views.choose_age_sex),
+    path('choose_name/',views.choose_name),
+    path('choose_belongings/',views.choose_belongings),
     
 ]
 
