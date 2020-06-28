@@ -25,6 +25,7 @@ urlpatterns = [
     path('create_pl/',views.create_pl),
     path('choose_age_sex/',views.choose_age_sex),
     path('choose_name/',views.choose_name),
+    path('choose_belongings/',views.choose_belongings),
     
 ]
 

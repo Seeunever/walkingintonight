@@ -1,30 +1,45 @@
+
+@function vw($px) {
+    @return($px / 1080) * 100vw
+}
+
+
 body{background-color: black;}
 
 div.character{
-    width: 30%;
-    height: 80%;
+    float: left;
+    width: 25%;
+    height: 100%;
     background-color:whitesmoke;
     opacity: 0.11;
-    float: left;
     border:15px solid rgb(46, 3, 3);
-    margin-top: 10%;
+    margin-top: 15%;
     color: brown;
+}
+
+div.bigtitle{
+    color: whitesmoke;
+    margin-left: 35%;
+    font-size: 50px;
+    background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+    text-shadow: 3px -3px black, 2px -2px white;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 div.property{
     font-size: 20px;
     color: rgb(143, 20, 20);
-    margin-left: 20px;
-    margin-top: 20px;
-
+    padding-left: 20px;
+    padding-top: 10px;
 }
 
 p.property{
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(143, 20, 20);
-    margin-left: 100px;
-    margin-top: 0px;
-
+    padding-left: 20px;
+    padding-top: 5px;
 }
 
 div.maintext{
@@ -33,11 +48,13 @@ div.maintext{
     /* background-color: whitesmoke; */
     opacity: 1;
     margin-top: 10%;
-    margin-left: 35%;
+    margin-left: 10%;
+    padding-left: 25%;
     color: whitesmoke;
 }
 
 button.create_pl{
+    float: left;
     width: 30%;
     height: 10%;
     background-color:rgb(85, 11, 11);
@@ -47,6 +64,7 @@ button.create_pl{
 }
 
 button.back_to_index{
+    float: left;
     width: 100px;
     height: 50px;
     background-color:rgb(85, 11, 11);
@@ -57,6 +75,7 @@ button.back_to_index{
 }
 
 p.dialog{
+    float: left;
     width: 20%;
     height: 20%;
     background-color: black;
@@ -68,6 +87,7 @@ p.dialog{
 }
 
 input.input_name{
+    float: left;
     position: absolute;
     top: 40%;
     left: 750px;
@@ -75,12 +95,14 @@ input.input_name{
 }
 
 button.ensure_name{
+    float: left;
     position: absolute;
     top: 40%;
     left: 900px;
 }
 
 button.choose{
+    float: left;
     width: 200px;
     height: 100px;
     background-color:rgb(85, 11, 11);
@@ -93,6 +115,7 @@ button.choose{
 }
 
 button.and{
+    float: left;
     width: 100px;
     height: 50px;
     position: absolute;

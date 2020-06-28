@@ -18,3 +18,6 @@ def choose_age_sex(request):
 
 def choose_name(request):
     return render(request,'choose_name.html')
+
+def choose_belongings(request):
+    return render(request,'choose_belongings.html')

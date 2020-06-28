@@ -1,5 +1,8 @@
 {
     "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\wife\\python.exe",
     "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "view-in-browser.customBrowser": "chrome",
+    "workbench.editorAssociations": [],
+    "python.linting.pylintArgs": ["--disable=C,R"]
 }

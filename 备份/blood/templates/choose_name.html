@@ -21,15 +21,20 @@
         <div class="property">性别：</div>
             <p id="pl_sex" class="property"></p>
         <div class="property">HP:</div>
+            <p id="pl_hp" class="property"></p>
         <div class="property">随身物品：</div>
+            <p id="pl_belongings" class="property"></p>
         
         <script>
             var pl_name = document.getElementById("pl_name");
             var pl_job = document.getElementById("pl_job");
             var pl_sex = document.getElementById("pl_sex");
+            var pl_hp = document.getElementById("pl_hp");
             pl_job.innerText = localStorage.getItem("job");
             pl_sex.innerText = localStorage.getItem("sex");
             pl_name.innerText = localStorage.getItem("name")
+            pl_hp.innerText = localStorage.getItem("hp")
+            pl_belongings.innerText = localStorage.getItem("ob")
         </script>
     </div>
 
@@ -46,7 +51,7 @@
     </script>
 
 
-        <form action="/choose_age_sex/" method="POST">
+        <form action="/choose_belongings/" method="POST">
             {% csrf_token %}
             <button class="and">然后...</button>
         </form>
