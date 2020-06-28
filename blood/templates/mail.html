@@ -2,17 +2,17 @@
 <html lang="ZH-CN">
 {% load static %}
 <head>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/static/css/character.css"/>
-    <script type="text/javascript" src="/static/js/character.js/"></script>
+    <script type="text/javascript" src="/static/js/character.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
 </head>
-<title>walking into night</title>
-<body>
 
+<title>walking into night</title>
+
+<body>
+    <script type="/static/js/charcter.js"></script>
     <div class="bigtitle">血色推理小镇</div>
     <div class="character">
         <div class="property">姓名：</div>
@@ -41,45 +41,31 @@
 
 
 
-    <p class="dialog">我随身携带着</p>
-
-    <div class="choose">
-        <button class="choose" id="ob_knife" value="小刀" onclick="obknife();">小刀</button>
-        <button class="choose" id="ob_rope" value="绳索" onclick="obrope();">绳索</button>
+    <div class="maintext">
+        <p id="mail_name" class="mail_name"></p>
+        <br>
+        趁新书刚刚完结的契机，我诚挚地邀请您来参与以这本新书为主题的推理宴会。
+        <br>
+        本次推理宴会将于11月30日于莱斯科尔，我的别墅召开，随信附上车票与路费，以防生变。
+        <br>我邀请了包括您在内共15名客人一起参与这场宴会，希望到时能为我们留下共同难忘的回忆。
+        <br><br>
+        戴斯
     </div>
 
     <script>
-        var storage = window.localStorage;
-        var times = 0;
-        function obknife(){
-            ob_knife.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
-            storage.ob = times % 2 == 0 ? 'none' : ob_knife.value;
-            times++;
-        }
-        storage.hp = 11;
+        var mailname = '尊敬的：' + pl_name.innerText;
+        mail_name.innerText = mailname;
     </script>
 
-
-    <script>
-        var storage = window.localStorage;
-        function obrope(){
-            ob_rope.style.background = times % 2 == 0 ? 'rgb(85, 11, 11)' : 'black';
-            storage.ob = times % 2 == 0 ? 'none' : ob_rope.value;
-            times++;
-        }
-        
-    </script>
-
-        <form action="/mail/" method="POST">
-            {% csrf_token %}
-            <button class="and">然后...</button>
-        </form>
+    <form action="/mail/" method="POST">
+        {% csrf_token %}
+        <button class="and">然后...</button>
+    </form>
 
 
     <form action="/back_to_index/" method="POST">
         {% csrf_token %}
         <button class="back_to_index">回到最初</button>
     </form>
-
     </body>
     </html>

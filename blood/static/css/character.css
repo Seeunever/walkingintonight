@@ -8,9 +8,10 @@ div.character{
     /* opacity: 0.05; */
     border:1.1vh solid rgb(46, 3, 3);
     box-shadow: 15px 10px 20px 10px rgb(46, 3, 3);
-    margin-top: 10vh;
+    margin-top: 0px;
     color: brown;
     position: fixed;
+    /* position: absolute; */
 }
 
 div.bigtitle{
@@ -140,6 +141,10 @@ button.ensure_name{
     margin-top: 20%;
     border-width: 0px;
     font-size: 20px;
+}
+
+p.mail_name{
+    color: whitesmoke;
 }
 
 

@@ -21,3 +21,6 @@ def choose_name(request):
 
 def choose_belongings(request):
     return render(request,'choose_belongings.html')
+
+def mail(request):
+    return render(request,'mail.html')
