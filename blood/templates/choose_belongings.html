@@ -13,6 +13,7 @@
 <title>walking into night</title>
 <body>
 
+    <div class="bigtitle">血色推理小镇</div>
     <div class="character">
         <div class="property">姓名：</div>
             <p id="pl_name" class="property"></p>
@@ -41,7 +42,12 @@
 
 
     <p class="dialog">我随身携带着</p>
-    <button class="choose" id="ob_knife" value="小刀" onclick="obknife();">小刀</button>
+
+    <div class="choose">
+        <button class="choose" id="ob_knife" value="小刀" onclick="obknife();">小刀</button>
+        <button class="choose" id="ob_rope" value="绳索" onclick="obrope();">绳索</button>
+    </div>
+
     <script>
         var storage = window.localStorage;
         var times = 0;
@@ -53,7 +59,7 @@
         storage.hp = 11;
     </script>
 
-    <button class="choose" id="ob_rope" value="绳索" onclick="obrope();">绳索</button>
+
     <script>
         var storage = window.localStorage;
         function obrope(){

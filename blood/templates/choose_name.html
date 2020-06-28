@@ -12,6 +12,7 @@
 </head>
 <title>walking into night</title>
 <body>
+    <div class="bigtitle">血色推理小镇</div>
 
     <div class="character">
         <div class="property">姓名：</div>
@@ -41,8 +42,12 @@
 
 
     <p class="dialog">我的名字叫做...</p>
-    <input class="input_name" id="choose_name">
-    <button class="ensure_name" onclick="choose_name();">确认</button>
+
+    <div class="choose">
+        <input class="input_name" id="choose_name">
+        <button class="ensure_name" onclick="choose_name();">确认</button>
+    </div>
+
     <script>
         var storage = window.localStorage;
         function choose_name(){

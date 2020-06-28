@@ -12,6 +12,7 @@
 </head>
 <title>walking into night</title>
 <body>
+    <div class="bigtitle">血色推理小镇</div>
  
     <div class="character">
         <div class="property">姓名：</div>
@@ -41,7 +42,11 @@
 
     <p class="dialog">我是一个...</p>
 
+    <div class="choose">
         <button class="choose" id="sex_male" value="男" onclick="sexmale();">男的</button>
+        <button class="choose" id="sex_female" value="女" onclick="sexfemale();">可爱的女孩子</button>
+    </div>
+
         <script>
             var storage = window.localStorage;
             var times = 0;
@@ -52,7 +57,7 @@
             }
         </script>
 
-        <button class="choose" id="sex_female" value="女" onclick="sexfemale();">可爱的女孩子</button>
+
         <script>
             var storage = window.localStorage;
             function sexfemale(){

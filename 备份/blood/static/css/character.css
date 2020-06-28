@@ -2,27 +2,34 @@ body{background-color: black;}
 
 div.character{
     float: left;
-    width: 25%;
+    width: 20%;
     height: 100%;
-    background-color:whitesmoke;
-    opacity: 0.11;
-    border:15px solid rgb(46, 3, 3);
-    margin-top: 15%;
+    background-color:black;
+    /* opacity: 0.05; */
+    border:1.1vh solid rgb(46, 3, 3);
+    box-shadow: 15px 10px 20px 10px rgb(46, 3, 3);
+    margin-top: 5%;
     color: brown;
+    position: fixed;
+}
+
+div.bigtitle{
+    color: whitesmoke;
+    margin-left: 35%;
+    font-size: 35px;
 }
 
 div.property{
-    font-size: 20px;
-    color: rgb(143, 20, 20);
-    padding-left: 20px;
+    font-size: 2.5vh;
+    color: rgb(163, 44, 44);
+    padding-left: 10px;
     padding-top: 10px;
-
 }
 
 p.property{
-    font-size: 25px;
-    color: rgb(143, 20, 20);
-    padding-left: 20px;
+    font-size: 2.5vh;
+    color: rgb(163, 44, 44);
+    padding-left: 10px;
     padding-top: 5px;
 }
 
@@ -35,15 +42,17 @@ div.maintext{
     margin-left: 10%;
     padding-left: 25%;
     color: whitesmoke;
+    font-size: 20px;
 }
 
 button.create_pl{
     float: left;
-    width: 30%;
-    height: 10%;
+    width: 15vh;
+    height: 10vmin;
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
-    margin-left:15%;
+    margin-left:45%;
+    margin-top: 5%;
     font-size: 15px;
 }
 

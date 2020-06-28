@@ -13,6 +13,8 @@
 <title>walking into night</title>
 <body>
 
+    <div class="bigtitle">血色推理小镇</div>
+
     <div class="character">
         <div class="property">姓名：</div>
             <p id="pl_name" class="property"></p>
@@ -42,7 +44,12 @@
 
     <p class="dialog">我是一个...</p>
 
+    <div class="choose">
         <button class="choose" id="job_doctor" value="医生" onclick="jobdoctor();">医生</button>
+        <button class="choose" id="job_book" value="出版商" onclick="jobbook();">出版商</button>
+        <button class="choose" id="job_pub" value="酒吧兼职招待" onclick="jobpub();">酒吧兼职招待</button>
+    </div>
+
         <script>
             var storage = window.localStorage;
             var times = 0;
@@ -54,7 +61,7 @@
             storage.hp = 11;
         </script>
 
-        <button class="choose" id="job_book" value="出版商" onclick="jobbook();">出版商</button>
+
         <script>
             var storage = window.localStorage;
             function jobbook(){
@@ -65,7 +72,7 @@
             
         </script>
 
-        <button class="choose" id="job_pub" value="酒吧兼职招待" onclick="jobpub();">酒吧兼职招待</button>
+
         <script>
             var storage = window.localStorage;
             function jobpub(){

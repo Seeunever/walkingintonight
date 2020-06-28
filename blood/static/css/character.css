@@ -1,44 +1,41 @@
-
-@function vw($px) {
-    @return($px / 1080) * 100vw
-}
-
-
 body{background-color: black;}
 
 div.character{
     float: left;
-    width: 25%;
+    width: 20%;
     height: 100%;
-    background-color:whitesmoke;
-    opacity: 0.11;
-    border:15px solid rgb(46, 3, 3);
-    margin-top: 15%;
+    background-color:black;
+    /* opacity: 0.05; */
+    border:1.1vh solid rgb(46, 3, 3);
+    box-shadow: 15px 10px 20px 10px rgb(46, 3, 3);
+    margin-top: 10vh;
     color: brown;
+    position: fixed;
 }
 
 div.bigtitle{
     color: whitesmoke;
     margin-left: 35%;
-    font-size: 50px;
-    background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
-    text-shadow: 3px -3px black, 2px -2px white;
+    font-size: 8vw;
+    background: #EEE repeat;
+    text-shadow: 5px -5px black, 4px -4px white;
     font-weight: bold;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    margin-top: 5%;
 }
 
 div.property{
-    font-size: 20px;
-    color: rgb(143, 20, 20);
-    padding-left: 20px;
+    font-size: 2.5vh;
+    color: rgb(163, 44, 44);
+    padding-left: 10px;
     padding-top: 10px;
 }
 
 p.property{
-    font-size: 25px;
-    color: rgb(143, 20, 20);
-    padding-left: 20px;
+    font-size: 2.5vh;
+    color: rgb(163, 44, 44);
+    padding-left: 10px;
     padding-top: 5px;
 }
 
@@ -51,60 +48,51 @@ div.maintext{
     margin-left: 10%;
     padding-left: 25%;
     color: whitesmoke;
+    font-size: 20px;
+}
+
+p.dialog{
+    width: 60%;
+    height: 50%;
+    /* background-color: whitesmoke; */
+    opacity: 1;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding-left: 25%;
+    color: whitesmoke;
+    font-size: 20px;
 }
 
 button.create_pl{
     float: left;
-    width: 30%;
-    height: 10%;
+    width: 15vh;
+    height: 10vmin;
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
-    margin-left:15%;
+    margin-left:50%;
+    margin-top: 5%;
     font-size: 15px;
 }
 
-button.back_to_index{
+button.and{
     float: left;
-    width: 100px;
-    height: 50px;
+    width: 15vh;
+    height: 10vmin;
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
-    position: absolute;
-    right: 100px;
-    top: 100px;
+    margin-left:50%;
+    margin-top: 5%;
+    font-size: 15px;
 }
 
-p.dialog{
-    float: left;
-    width: 20%;
-    height: 20%;
-    background-color: black;
-    color: whitesmoke;
-    font-size: 20px;
-    position: absolute;
-    top: 30%;
-    left: 55%;
-}
-
-input.input_name{
-    float: left;
-    position: absolute;
-    top: 40%;
-    left: 750px;
-    width: 100px;
-}
-
-button.ensure_name{
-    float: left;
-    position: absolute;
-    top: 40%;
-    left: 900px;
+div.choose{
+    margin-left: 40%;
 }
 
 button.choose{
     float: left;
-    width: 200px;
-    height: 100px;
+    width: 20vh;
+    height: 10vh;
     background-color:rgb(85, 11, 11);
     color:whitesmoke;
     opacity: 0.3;
@@ -114,16 +102,44 @@ button.choose{
     font-size: 20px;
 }
 
-button.and{
+
+button.back_to_index{
     float: left;
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 70%;
-    right: 38%;
-    background-color: black;
-    border-color: antiquewhite;
-    border-width: 5px;
-    font-size: 20px;
-    color: antiquewhite;
+    width: 15vw;
+    height: 10vh;
+    background-color:rgb(85, 11, 11);
+    color:whitesmoke;
+    position : absolute;
+    left: 2%;
+    top: 5%;
 }
+
+
+
+input.input_name{
+    float: left;
+    width: 20vh;
+    height: 10vh;
+    background-color:rgb(85, 11, 11);
+    color:whitesmoke;
+    opacity: 0.3;
+    margin-left: 2%;
+    margin-top: 20%;
+    border-width: 0px;
+    font-size: 20px;
+}
+
+button.ensure_name{
+    float: left;
+    width: 20vh;
+    height: 10vh;
+    background-color:rgb(85, 11, 11);
+    color:whitesmoke;
+    opacity: 0.3;
+    margin-left: 2%;
+    margin-top: 20%;
+    border-width: 0px;
+    font-size: 20px;
+}
+
+
